@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".modules.two.ModuleTwoActivity">
+    tools:context=".modules.three.ModuleThreeActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -19,13 +19,13 @@
             android:background="?attr/colorPrimary"
             app:navigationIcon="@mipmap/ic_launcher"
             app:popupTheme="@style/AppTheme.PopupOverlay"
-            app:subtitle="@string/str_module2"
+            app:subtitle="@string/str_module3"
             app:subtitleTextColor="@color/colorDetail"
             app:title="@string/app_name"
             app:titleTextColor="@color/colorText" />
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_module_one" />
+    <include layout="@layout/content_module_three" />
 
 </android.support.design.widget.CoordinatorLayout>

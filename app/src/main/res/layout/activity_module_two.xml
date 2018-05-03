@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".modules.one.ModuleOneActivity">
+    android:orientation="vertical"
+    tools:context=".modules.two.ModuleTwoActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -19,13 +20,19 @@
             android:background="?attr/colorPrimary"
             app:navigationIcon="@mipmap/ic_launcher"
             app:popupTheme="@style/AppTheme.PopupOverlay"
-            app:subtitle="@string/str_module1"
+            app:subtitle="@string/str_module2"
             app:subtitleTextColor="@color/colorDetail"
             app:title="@string/app_name"
             app:titleTextColor="@color/colorText" />
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_module_one" />
+    <FrameLayout
+        android:id="@+id/fragment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary">
 
-</android.support.design.widget.CoordinatorLayout>
+    </FrameLayout>
+
+</LinearLayout>

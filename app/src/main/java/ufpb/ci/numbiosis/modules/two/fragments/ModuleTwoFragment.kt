@@ -1,101 +1,62 @@
 package ufpb.ci.numbiosis.modules.two.fragments
 
-import android.content.Context
-import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v4.content.ContextCompat
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-
+import android.widget.Button
+import android.widget.ImageButton
+import com.amulyakhare.textdrawable.TextDrawable
+import kotlinx.android.synthetic.main.fragment_module_two.*
 import ufpb.ci.numbiosis.R
+import ufpb.ci.numbiosis.modules.two.TransitionClickListener
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Activities that contain this fragment must implement the
- * [ModuleTwoFragment.OnFragmentInteractionListener] interface
- * to handle interaction events.
- * Use the [ModuleTwoFragment.newInstance] factory method to
- * create an instance of this fragment.
- *
- */
 class ModuleTwoFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-    private var listener: OnFragmentInteractionListener? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    val listener = TransitionClickListener(this)
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_module_two, container, false)
+        val view = inflater.inflate(R.layout.fragment_module_two, container, false)
+        setButtons(view)
+        return view
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
-    fun onButtonPressed(uri: Uri) {
-        listener?.onFragmentInteraction(uri)
-    }
+    private fun setButtons(view: View){
+        val icon1 = view.findViewById<ImageButton>(R.id.icon1)
+        val icon2 = view.findViewById<ImageButton>(R.id.icon2)
+        val icon3 = view.findViewById<ImageButton>(R.id.icon3)
+        val icon4 = view.findViewById<ImageButton>(R.id.icon4)
+        val icon5 = view.findViewById<ImageButton>(R.id.icon5)
 
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        if (context is OnFragmentInteractionListener) {
-            listener = context
-        } else {
-            throw RuntimeException(context.toString() + " must implement OnFragmentInteractionListener")
-        }
-    }
+        val title1 = view.findViewById<Button>(R.id.title1)
+        val title2 = view.findViewById<Button>(R.id.title2)
+        val title3 = view.findViewById<Button>(R.id.title3)
+        val title4 = view.findViewById<Button>(R.id.title4)
+        val title5 = view.findViewById<Button>(R.id.title5)
 
-    override fun onDetach() {
-        super.onDetach()
-        listener = null
-    }
+        icon1.setImageDrawable(TextDrawable.builder()
+                .buildRound(title1.text.substring(0, 1), ContextCompat.getColor(context!!, R.color.colorText)))
+        icon2.setImageDrawable(TextDrawable.builder()
+                .buildRound(title2.text.substring(0, 1), ContextCompat.getColor(context!!, R.color.colorText)))
+        icon3.setImageDrawable(TextDrawable.builder()
+                .buildRound(title3.text.substring(0, 1), ContextCompat.getColor(context!!, R.color.colorText)))
+        icon4.setImageDrawable(TextDrawable.builder()
+                .buildRound(title4.text.substring(0, 1), ContextCompat.getColor(context!!, R.color.colorText)))
+        icon5.setImageDrawable(TextDrawable.builder()
+                .buildRound(title5.text.substring(0, 1), ContextCompat.getColor(context!!, R.color.colorText)))
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     *
-     *
-     * See the Android Training lesson [Communicating with Other Fragments]
-     * (http://developer.android.com/training/basics/fragments/communicating.html)
-     * for more information.
-     */
-    interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
-        fun onFragmentInteraction(uri: Uri)
-    }
+        icon1.setOnClickListener(listener)
+        icon2.setOnClickListener(listener)
+        icon3.setOnClickListener(listener)
+        icon4.setOnClickListener(listener)
+        icon5.setOnClickListener(listener)
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ModuleTwoFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-                ModuleTwoFragment().apply {
-                    arguments = Bundle().apply {
-                        putString(ARG_PARAM1, param1)
-                        putString(ARG_PARAM2, param2)
-                    }
-                }
+        title1.setOnClickListener(listener)
+        title2.setOnClickListener(listener)
+        title3.setOnClickListener(listener)
+        title4.setOnClickListener(listener)
+        title5.setOnClickListener(listener)
     }
 }

@@ -1,4 +1,4 @@
-package numbiosis.backend.utils;
+package ufpb.ci.numbiosis.modules.two.methods.utils;
 
 import java.util.Arrays;
 import java.util.Iterator;
@@ -15,7 +15,7 @@ public class Vector implements Iterable<Double> {
         this.size = vector.length;
     }
 
-    Vector(Type T, int size) {
+    public Vector(Type T, int size) {
         if(T.equals(Type.ZEROS)) vector = new double[size];
         else if(T.equals(Type.ONES)) {
             vector = new double[size];
@@ -29,7 +29,7 @@ public class Vector implements Iterable<Double> {
         return this.size;
     }
 
-    double get(int index) {
+    public double get(int index) {
         return this.vector[index];
     }
 

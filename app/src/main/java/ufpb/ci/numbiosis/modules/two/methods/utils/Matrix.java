@@ -1,4 +1,4 @@
-package numbiosis.backend.utils;
+package ufpb.ci.numbiosis.modules.two.methods.utils;
 
 import java.util.Arrays;
 import java.util.Iterator;

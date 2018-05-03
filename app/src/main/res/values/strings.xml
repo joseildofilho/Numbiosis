@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Numbiosis</string>
+    <string name="str_module1">Módulo 1</string>
+    <string name="str_module2">Módulo 2</string>
+    <string name="str_module3">Módulo 3</string>
+    <string name="title_activity_module_one">ModuleOneActivity</string>
+    <string name="str_module2_item1">Eliminação Gaussiana</string>
+    <string name="str_add_linear_system">Configure o sistema linear:</string>
+    <string name="str_calculate">Calcular!</string>
+    <string name="str_result_title">Resultado: </string>
+    <string name="str_module2_item2">Fatoração LU</string>
+    <string name="str_module2_item3">Fatoração de Cholesky</string>
+    <string name="str_module2_item4">Método de Jacobi</string>
+    <string name="str_module2_item5">Método de Gauss-Seidel</string>
+    <string name="str_matrix_result">Matriz fatorada resultante:</string>
+    <string name="str_initial_title">Vetor inicial:</string>
+    <string name="str_tolerance">Tolerância:</string>
+    <string name="str_iterations">Iterações:</string>
 </resources>

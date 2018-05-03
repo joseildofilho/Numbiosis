@@ -1,7 +1,7 @@
-package numbiosis.backend;
+package ufpb.ci.numbiosis.modules.two.methods;
 
-import numbiosis.backend.utils.LinearSystem;
-import numbiosis.backend.utils.Matrix;
+import ufpb.ci.numbiosis.modules.two.methods.utils.Matrix;
+import ufpb.ci.numbiosis.modules.two.methods.utils.LinearSystem;
 
 public class LUDecomposition {
     public static void run(LinearSystem ls, Matrix u) {

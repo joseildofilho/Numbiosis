@@ -1,13 +1,13 @@
-package numbiosis.backend;
+package ufpb.ci.numbiosis.modules.two.methods;
 
-import numbiosis.backend.utils.LinearSystem;
-import numbiosis.backend.utils.Matrix;
+import ufpb.ci.numbiosis.modules.two.methods.utils.LinearSystem;
+import ufpb.ci.numbiosis.modules.two.methods.utils.Matrix;
 
 public class CholeskyDecomposition {
 
-    static Matrix run(LinearSystem ls) {
+    public static Matrix[] run(LinearSystem ls) {
         double[][] G = new double[ls.getEquationsSize()][ls.getEquationsSize()];
-
+        double[][] Gt = new double[G[0].length][G[0].length];
         double sum;
         for(int i = 0; i < ls.getEquationsSize(); i++) {
             for(int j = 0; j < i + 1; j++) {
@@ -29,7 +29,16 @@ public class CholeskyDecomposition {
 
             }
         }
+        for (int i = 0; i < G[0].length; i++){
+            for(int j = 0; j < G[0].length; j++){
+                Gt[i][j] = G[j][i];
+            }
+        }
 
-        return new Matrix(G);
+        Matrix[] matrix = new Matrix[2];
+        matrix[1] = new Matrix(G);
+        matrix[2] = new Matrix(Gt);
+
+        return matrix;
     }
 }

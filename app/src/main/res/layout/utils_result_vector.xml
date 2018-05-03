@@ -1,6 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:gravity="center"
+    android:orientation="horizontal">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/result_x"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="X"
+        android:textAppearance="@android:style/TextAppearance.WindowTitle"
+        android:textColor="@color/colorDetail"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/matrix_divider3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/result_y"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="Y"
+        android:textAppearance="@android:style/TextAppearance.WindowTitle"
+        android:textColor="@color/colorDetail"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/x2_text3"
+        app:layout_constraintStart_toEndOf="@+id/matrix_divider3"
+        app:layout_constraintTop_toBottomOf="@+id/x2_text" />
+
+    <TextView
+        android:id="@+id/result_z"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="Z"
+        android:textAppearance="@android:style/TextAppearance.WindowTitle"
+        android:textColor="@color/colorDetail"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/matrix_divider3" />
+</LinearLayout>

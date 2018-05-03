@@ -4,15 +4,140 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     tools:context="ufpb.ci.numbiosis.MainActivity">
 
-    <TextView
+    <ImageView
+        android:id="@+id/numbiosisTitle"
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.02"
+        app:srcCompat="@drawable/numbiosis_title" />
+
+    <ImageButton
+        android:id="@+id/module1"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:drawable/list_selector_background"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numbiosisTitle" />
+
+    <ImageButton
+        android:id="@+id/module2"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/list_selector_background"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/module3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/module1" />
+
+    <ImageButton
+        android:id="@+id/module3"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="32dp"
+        android:background="@android:drawable/list_selector_background"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/divider_item"
+        android:layout_width="1dp"
+        android:layout_height="102dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorDetail"
+        app:layout_constraintStart_toEndOf="@+id/module1"
+        app:layout_constraintTop_toBottomOf="@+id/numbiosisTitle" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="1dp"
+        android:layout_height="102dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorDetail"
+        app:layout_constraintBottom_toTopOf="@+id/divider3"
+        app:layout_constraintStart_toEndOf="@+id/module2"
+        app:layout_constraintTop_toBottomOf="@+id/divider_item"
+        app:layout_constraintVertical_bias="0.43" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="1dp"
+        android:layout_height="102dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/colorDetail"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/module3" />
+
+    <Button
+        android:id="@+id/module1Text"
+        style="@android:style/Widget.Holo.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/str_module1"
+        android:textAppearance="@android:style/TextAppearance.WindowTitle"
+        android:textColor="@color/colorText"
+        android:textSize="36sp"
+        app:layout_constraintStart_toEndOf="@+id/divider_item"
+        app:layout_constraintTop_toBottomOf="@+id/numbiosisTitle" />
+
+    <Button
+        android:id="@+id/module2Text"
+        style="@android:style/Widget.Holo.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/str_module2"
+        android:textAppearance="@android:style/TextAppearance.WindowTitle"
+        android:textColor="@color/colorText"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/module3Text"
+        app:layout_constraintStart_toEndOf="@+id/divider2"
+        app:layout_constraintTop_toBottomOf="@+id/module1Text"
+        app:layout_constraintVertical_bias="0.45" />
+
+    <Button
+        android:id="@+id/module3Text"
+        style="@android:style/Widget.Holo.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="44dp"
+        android:layout_marginStart="24dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/str_module3"
+        android:textAppearance="@android:style/TextAppearance.WindowTitle"
+        android:textColor="@color/colorText"
+        android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/divider3" />
 
 </android.support.constraint.ConstraintLayout>

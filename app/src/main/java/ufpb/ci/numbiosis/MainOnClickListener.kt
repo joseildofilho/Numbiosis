@@ -1,14 +1,12 @@
-package ufpb.ci.numbiosis.modules
+package ufpb.ci.numbiosis
 
 import android.content.Intent
-import android.support.v4.content.ContextCompat
 import android.view.View
-import ufpb.ci.numbiosis.R
 import ufpb.ci.numbiosis.modules.one.ModuleOneActivity
 import ufpb.ci.numbiosis.modules.three.ModuleThreeActivity
 import ufpb.ci.numbiosis.modules.two.ModuleTwoActivity
 
-class MainOnClickListener: View.OnClickListener {
+class MainOnClickListener(var mainActivity: MainActivity): View.OnClickListener {
     override fun onClick(v: View?) {
         val activity = when(v!!.id){
             R.id.module1 -> ModuleOneActivity()
@@ -18,8 +16,9 @@ class MainOnClickListener: View.OnClickListener {
             R.id.module2Text -> ModuleTwoActivity()
             R.id.module3Text -> ModuleThreeActivity()
             else -> null
-        }
-        val intent = Intent(v!!.context, activity!!::class.java)
-        ContextCompat.startActivity(v.context, intent, null)
+        } ?: return
+        mainActivity.mainOnClickListener = null
+        val intent = Intent(mainActivity, activity::class.java)
+        mainActivity.startActivity(intent)
     }
 }
