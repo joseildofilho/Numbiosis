@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:gravity="center_vertical|center_horizontal|center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/f_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.01"
+            android:text="F(y, t)= "
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.WindowTitle"
+            android:textColor="@color/colorDetail"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/f_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorDetail"
+            android:ems="10"
+            android:inputType="textNoSuggestions"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.WindowTitle"
+            android:textColor="@color/colorText"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/yi_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:text="Y(i)= "
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.WindowTitle"
+            android:textColor="@color/colorDetail"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/yi_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorDetail"
+            android:ems="10"
+            android:inputType="numberSigned|numberDecimal|numberPassword|phone"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.WindowTitle"
+            android:textColor="@color/colorText"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/h_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.01"
+            android:text="H="
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.WindowTitle"
+            android:textColor="@color/colorDetail"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/h_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorDetail"
+            android:ems="10"
+            android:inputType="numberSigned|numberDecimal|numberPassword|phone"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.WindowTitle"
+            android:textColor="@color/colorText"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/n_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.01"
+            android:text="N="
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.WindowTitle"
+            android:textColor="@color/colorDetail"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/n_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorDetail"
+            android:ems="10"
+            android:inputType="numberSigned|numberDecimal|numberPassword|phone"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.WindowTitle"
+            android:textColor="@color/colorText"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+</LinearLayout>

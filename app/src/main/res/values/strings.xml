@@ -16,4 +16,10 @@
     <string name="str_initial_title">Vetor inicial:</string>
     <string name="str_tolerance">Tolerância:</string>
     <string name="str_iterations">Iterações:</string>
+    <string name="str_module3_item1">Interpolador de Newtow</string>
+    <string name="str_module3_item2">Quadratura de Gauss-Legendre</string>
+    <string name="str_module3_item3">Método de Heun</string>
+    <string name="str_module3_item4">Método do Ponto Médio</string>
+    <string name="str_add_points">Adicione os pontos (X, Y) separados por espaço</string>
+    <string name="str_configure_PVI">Configure o PVI</string>
 </resources>
